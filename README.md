@@ -22,3 +22,33 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# nyaotubeのDB設計
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+### Association
+- has_many :posts
+- has_many :comments
+
+## postsテーブル
+|move|string|null: false|
+|title|text|null: false|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many :comments
+
+## commentsテーブル
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :post
