@@ -3,11 +3,11 @@
     .content
       %p.content__title
         nyaotube
-      = link_to "#", class: 'content__rogin-button' do
+      = link_to user_session_path, class: 'content__rogin-button' do
         %button.content__rogin
           %i.fas.fa-caret-right
           ログイン
-      = link_to "#", class: 'content__rogin-button' do
+      = link_to new_user_registration_path, class: 'content__rogin-button' do
         %button.content__rogin
           %i.fas.fa-caret-right
           新規登録はこちらから
