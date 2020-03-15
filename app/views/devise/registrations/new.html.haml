@@ -1,6 +1,7 @@
 .form
   .header
-    nyaotube
+    = link_to root_path, class: "link-decoration" do
+      nyaotube
   %hr
   .form__container
     .form__title
@@ -28,5 +29,5 @@
           利用規約
         に同意したものとみなします
       =f.submit '新規登録', class: "submit-btn"
-
+    = link_to root_path do
       %button.back-btn トップに戻る
