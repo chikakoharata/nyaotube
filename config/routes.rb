@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'posts/index'
-  root "posts#index"
+
+  root "posts#main_menu"
+  resources :users, only: [:edit, :update]
 end
