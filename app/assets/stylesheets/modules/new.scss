@@ -62,3 +62,9 @@
     cursor: pointer;
   }
 }
+
+.body {
+  &__title {
+    font-size: 20px;
+  }
+}
