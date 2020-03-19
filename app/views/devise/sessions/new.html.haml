@@ -8,7 +8,7 @@
       ログイン
 
     = form_with model: @user, url: user_session_path, local: true do |f|
-      = devise_error_messages!
+    
 
       =f.email_field :email, class: "text-field", placeholder: 'メールアドレス'
       =f.password_field :password, autocomplete: "off", class: "text-field", placeholder: 'パスワード'
