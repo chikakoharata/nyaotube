@@ -6,6 +6,8 @@
   .form__container
     .form__title
       アカウントの編集
+      .container__title
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
     .container__title
       会員情報入力
     = form_with model: @user, url: user_registration_path, local: true, method: :post do |f|
