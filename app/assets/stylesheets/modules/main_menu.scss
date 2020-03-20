@@ -3,15 +3,50 @@
   width: 100vw;
   height: 100px;
   line-height: 100px;
+  display: flex;
+  justify-content:space-between;
+  padding: 0 30px;
   .main__link-decoration {
     text-decoration: none;
     font-family: 'ヒラギノ明朝 ProN W3';
     text-shadow: pink 1px 0 10px;
-    padding: 30px;
     font-size: 35px;
   }
   .main__link-decoration:visited {
     color:black;
+  }
+  .search-box {
+    .search-form {
+      .form__input {
+        height: 40px;
+        width: 500px;
+      }
+      .form__mask--btn {
+        background-color:palevioletred;
+        height: 40px;
+        width: 80px;
+        line-height: 40px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  .signin-user {
+    display: flex;
+    line-height: 100px;
+    .user-name {
+      margin: 10% 0 0 0;
+      font-size: 20px;
+      padding: 0 15px;
+    }
+    .user-icon {
+      width: 50px;
+      height: 50px;
+      margin: auto;
+    }
+    .edit-icon {
+      margin: 10% 0 0 5px;
+    }
   }
 }
 .body {

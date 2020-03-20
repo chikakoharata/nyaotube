@@ -1,5 +1,27 @@
 .header
   = link_to root_path, class: "main__link-decoration" do
     nyaotube
+  .search-box
+    = form_with url: "#", method: 'get', local: true do |f|
+      .search-form
+        = f.text_field :search, class: "form__input", placeholder: 'キーワードを入力してください'
+        = f.label :image, class: 'form__mask' do
+          = f.submit '検索', class: "form__mask--btn"
+
+  .signin-user
+    .user-name
+      = current_user.nickname
+    .user-icon 
+      = image_tag "猫.jpg",class: "user-icon"
+    .edit-icon
+      = link_to edit_user_path(current_user) do
+        = icon('fas', 'cog', class: 'edit-icon')
 .body
+  .body__title
+    あなたにおすすめ
+  .body__title
+    新規投稿
+  .body__title
+    閲覧履歴
+
 .footer
