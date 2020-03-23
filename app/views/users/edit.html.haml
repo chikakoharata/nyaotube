@@ -11,7 +11,6 @@
     .container__title
       会員情報入力
     = form_with model: current_user, url: user_path, local: true do |f|
-
       .title
         ニックネーム
       =f.text_field :nickname, class: "text-field", placeholder: '  例）猫田ねこ'
